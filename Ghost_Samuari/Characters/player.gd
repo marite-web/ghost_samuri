@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
-
 @export var normal_speed : float = 150.0
 @export var jump_velocity : float = -150.0
 @export var double_jump_velocity : float = -100.0  
 @export var stationary_dash : float = 1000.0
 @export var moving_dash : float = 3000.0 
-@export var dashlength : float = 0.1
+@export var dashlength : float = 0.3
+const MAX_HEALTH : int = 100
 
 @onready var dash = $dash
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped : bool = false
@@ -17,6 +18,7 @@ var locked_animation : bool = false
 var is_dashing : bool = false
 var direction : Vector2 = Vector2.ZERO
 var moving : bool = false
+var health : int = MAX_HEALTH
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -37,18 +39,21 @@ func _physics_process(delta):
 	direction = Input.get_vector("left", "right", "up", "down")
 	if direction:
 		velocity.x = direction.x * normal_speed
-	elif Input.is_action_just_pressed("dash"):
-		velocity.x = move_toward(velocity.x,0, moving_dash)
 	else:
 		velocity.x = move_toward(velocity.x, 0, normal_speed)
+	
 	if Input.is_action_pressed("right") or Input.is_action_pressed("left"):
 		moving = true
 	else:
 		moving = false
 	
 	if Input.is_action_just_pressed("dash"):
+		is_dashing = true
+		animated_sprite.play("dash")
+		health -= 10
+		print(health)
 		var turn;
-		if animated_sprite.flip_h == true:
+		if animated_sprite.flip_h == false:
 			turn = 1;
 		else:
 			turn = -1;
@@ -57,22 +62,24 @@ func _physics_process(delta):
 			velocity.x = stationary_dash * turn
 		else:
 			dash.start_dash(dashlength)
-			velocity.x = moving_dash * turn
-		
-			
-	upate_animation()
+			velocity.x = moving_dash * turn 
+		is_dashing = false
+ 
+	update_animation()
 	move_and_slide()
 	update_facing_direction()
+	set_health_bar()
 	
-func upate_animation():
+func update_animation():
 	if not locked_animation: 
-		if direction.x != 0:
+		if not is_dashing and Input.is_action_pressed("right") or Input.is_action_pressed("left") and not is_dashing:
 			animated_sprite.play("run")
-		else:
-			animated_sprite.play("idle")
-
+			
 func update_facing_direction():
 	if direction.x > 0:
-		animated_sprite.flip_h = true
-	elif direction.x < 0:
 		animated_sprite.flip_h = false
+	elif direction.x < 0:
+		animated_sprite.flip_h = true
+
+func set_health_bar():
+	$soulbar.value = health

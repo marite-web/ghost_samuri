@@ -1,44 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://dihpb24rgkj4v"]
+[gd_scene load_steps=19 format=3 uid="uid://dihpb24rgkj4v"]
 
-[ext_resource type="Texture2D" uid="uid://dptvvj0bbb0bt" path="res://Ghost_samurai_assests/Character/Idle/idle animation.png" id="1_xswqo"]
+[ext_resource type="Texture2D" uid="uid://rm3f0jjp2gan" path="res://Ghost_samurai_assests/Character/Idle/idle animation.png" id="1_xswqo"]
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_y2s0f"]
-[ext_resource type="Texture2D" uid="uid://c047m2cw5ohwq" path="res://Ghost_samurai_assests/Character/dash/dash.png" id="2_dbwe3"]
-[ext_resource type="Texture2D" uid="uid://cdpj37tjfikf7" path="res://Ghost_samurai_assests/Character/walking/walking animation 2.png" id="3_2ucgs"]
+[ext_resource type="Texture2D" uid="uid://cr07w3mfp3iie" path="res://Ghost_samurai_assests/Character/walking/walking animation 2.png" id="3_2ucgs"]
 [ext_resource type="PackedScene" uid="uid://1cmaxt0faj10" path="res://Levels/dash.tscn" id="4_u2mg3"]
-[ext_resource type="Texture2D" uid="uid://b61e4nhjjvuc7" path="res://Ghost_samurai_assests/Soul bar - empty.png" id="6_6srxg"]
-[ext_resource type="Texture2D" uid="uid://208p04ruawp6" path="res://Ghost_samurai_assests/soulbar-fill.png" id="7_dctew"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gyyv3"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(0, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1sy1t"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(40, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gvbmc"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(80, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_04utw"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(120, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xng04"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(160, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_51h7g"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(200, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_13tj7"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(240, 0, 40, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gttqn"]
-atlas = ExtResource("2_dbwe3")
-region = Rect2(280, 0, 40, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vejoo"]
 atlas = ExtResource("1_xswqo")
@@ -90,35 +55,6 @@ region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_im2rd"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gyyv3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1sy1t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gvbmc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_04utw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xng04")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_51h7g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_13tj7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gttqn")
-}],
-"loop": false,
-"name": &"dash",
-"speed": 30.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vejoo")
@@ -175,22 +111,13 @@ script = ExtResource("1_y2s0f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_im2rd")
-animation = &"dash"
+animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.595689
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("CapsuleShape2D_j0g7f")
 
 [node name="dash" parent="." instance=ExtResource("4_u2mg3")]
-
-[node name="soulbar" type="TextureProgressBar" parent="."]
-offset_left = -25.0
-offset_top = -34.0
-offset_right = 15.0
-offset_bottom = -18.0
-scale = Vector2(1.24, 1)
-texture_under = ExtResource("6_6srxg")
-texture_over = ExtResource("6_6srxg")
-texture_progress = ExtResource("7_dctew")
-metadata/_edit_use_anchors_ = true

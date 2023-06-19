@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dptvvj0bbb0bt"
-path="res://.godot/imported/idle animation.png-ec8a18177bb4ed0bba42b7b95f1e5c1c.ctex"
+uid="uid://c047m2cw5ohwq"
+path="res://.godot/imported/dash.png-305214b99ad30f9fef1f00773111fa27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost_samurai_assests/Character/Idle/idle animation.png"
-dest_files=["res://.godot/imported/idle animation.png-ec8a18177bb4ed0bba42b7b95f1e5c1c.ctex"]
+source_file="res://Ghost_samurai_assests/Character/dash/dash.png"
+dest_files=["res://.godot/imported/dash.png-305214b99ad30f9fef1f00773111fa27.ctex"]
 
 [params]
 

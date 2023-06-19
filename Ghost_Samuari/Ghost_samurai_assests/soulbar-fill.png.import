@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dptvvj0bbb0bt"
-path="res://.godot/imported/idle animation.png-ec8a18177bb4ed0bba42b7b95f1e5c1c.ctex"
+uid="uid://208p04ruawp6"
+path="res://.godot/imported/soulbar-fill.png-db551df065119ab02831d8684a57b4a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost_samurai_assests/Character/Idle/idle animation.png"
-dest_files=["res://.godot/imported/idle animation.png-ec8a18177bb4ed0bba42b7b95f1e5c1c.ctex"]
+source_file="res://Ghost_samurai_assests/soulbar-fill.png"
+dest_files=["res://.godot/imported/soulbar-fill.png-db551df065119ab02831d8684a57b4a6.ctex"]
 
 [params]
 
