@@ -69,6 +69,9 @@ func _physics_process(delta):
 			velocity.x = moving_dash * turn 
 		is_dashing = false
  
+	if Input.is_action_just_pressed("attack"):
+		animated_sprite.play("attack")
+		
 	set_soul_bar()
 	update_animation()
 	move_and_slide()
@@ -78,14 +81,16 @@ func _ready():
 	bar.value = MAX_SOUL
 
 func update_animation():
-	if not locked_animation: 
-		if not is_dashing and Input.is_action_pressed("right") or Input.is_action_pressed("left") and not is_dashing:
-			animated_sprite.play("run")
-		elif is_dashing:
-			animated_sprite.play("dash")
-		else:
-			animated_sprite.play("idle")
-
+	if Input.is_action_just_pressed("attack"):
+		animated_sprite.play("attack")
+	elif Input.is_action_just_pressed("dash"):
+		animated_sprite.play("dash")
+	elif Input.is_action_pressed("right") or Input.is_action_pressed("left"):
+		animated_sprite.play("run")
+	
+	
+		
+	
 func update_facing_direction():
 	if direction.x > 0:
 		animated_sprite.flip_h = false
