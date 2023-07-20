@@ -1,4 +1,6 @@
 res://Levels/test_scene.tscn
 res://player (1).tscn
+res://Enemy/attackingEnemy/testingattack.tscn
+res://Characters/Sword.gd
+res://Enemy/attackingEnemy/Damagable.gd
 res://Characters/player.gd
-res://Sword.gd

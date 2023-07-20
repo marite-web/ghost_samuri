@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://narlbyfnm6ik"]
+
+[ext_resource type="Texture2D" uid="uid://mvnfa0yk4eke" path="res://Enemy/security guard.png" id="1_ixn8f"]
+[ext_resource type="Script" path="res://Enemy/attackingEnemy/Damagable.gd" id="2_inwg3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f2qps"]
+radius = 6.0
+height = 28.0
+
+[node name="testingattack" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_f2qps")
+
+[node name="Damagable" type="Node" parent="."]
+script = ExtResource("2_inwg3")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ixn8f")
+flip_h = true

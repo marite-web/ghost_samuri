@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuum8j1ojxvkw"]
+
+[ext_resource type="Texture2D" uid="uid://mvnfa0yk4eke" path="res://Enemy/security guard.png" id="1_r3dff"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wbjpw"]
+radius = 5.0
+height = 28.0
+
+[node name="testingattack" type="Sprite2D"]
+position = Vector2(-186, 75)
+texture = ExtResource("1_r3dff")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_wbjpw")

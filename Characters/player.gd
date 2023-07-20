@@ -88,9 +88,6 @@ func update_animation():
 	elif Input.is_action_pressed("right") or Input.is_action_pressed("left"):
 		animated_sprite.play("run")
 	
-	
-		
-	
 func update_facing_direction():
 	if direction.x > 0:
 		animated_sprite.flip_h = false
@@ -102,10 +99,12 @@ func end_game():
 
 func set_soul_bar():
 	bar.value = souls
-	print(bar.value)
 	if souls <= 0:
 		end_game()
 
 func _on_soultimer_timeout():
 	souls -=5
+	print(souls)
 
+func _on_animated_sprite_2d_animation_finished():
+	animated_sprite.play("idle")

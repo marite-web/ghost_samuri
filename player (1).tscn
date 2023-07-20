@@ -2,23 +2,23 @@
 
 [ext_resource type="Texture2D" uid="uid://dptvvj0bbb0bt" path="res://Ghost_samurai_assests/Character/Idle/idle animation.png" id="1_xswqo"]
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_y2s0f"]
-[ext_resource type="Texture2D" uid="uid://c1qiioctw22j6" path="res://Ghost_samurai_assests/Attack/attack 1.png" id="2_ngp6u"]
+[ext_resource type="Texture2D" uid="uid://dlh7inrghcn0i" path="res://Ghost_samurai_assests/Attack/attack 1.png" id="2_ngp6u"]
 [ext_resource type="Texture2D" uid="uid://c047m2cw5ohwq" path="res://Ghost_samurai_assests/Character/dash/dash.png" id="2_pe264"]
 [ext_resource type="Texture2D" uid="uid://cdpj37tjfikf7" path="res://Ghost_samurai_assests/Character/walking/walking animation 2.png" id="3_2ucgs"]
 [ext_resource type="PackedScene" uid="uid://1cmaxt0faj10" path="res://Levels/dash.tscn" id="4_u2mg3"]
-[ext_resource type="Script" path="res://Sword.gd" id="7_jf1xj"]
+[ext_resource type="Script" path="res://Characters/Sword.gd" id="7_fm8kl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvof6"]
 atlas = ExtResource("2_ngp6u")
 region = Rect2(0, 0, 48, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2j5nm"]
-atlas = ExtResource("2_ngp6u")
-region = Rect2(96, 0, 48, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcix3"]
 atlas = ExtResource("2_ngp6u")
 region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j5nm"]
+atlas = ExtResource("2_ngp6u")
+region = Rect2(96, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pkufx"]
 atlas = ExtResource("2_ngp6u")
@@ -115,10 +115,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_cvof6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2j5nm")
+"texture": SubResource("AtlasTexture_hcix3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hcix3")
+"texture": SubResource("AtlasTexture_2j5nm")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pkufx")
@@ -131,7 +131,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -204,27 +204,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6nfxi")
 }],
-"loop": true,
+"loop": false,
 "name": &"run",
-"speed": 15.0
+"speed": 20.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j0g7f"]
 radius = 6.0
 height = 28.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yhugj"]
-radius = 11.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w520p"]
+radius = 6.0
+height = 24.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_y2s0f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_im2rd")
-animation = &"attack"
+animation = &"run"
 autoplay = "idle"
-frame = 5
+frame = 6
 frame_progress = 1.0
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
@@ -233,10 +235,11 @@ shape = SubResource("CapsuleShape2D_j0g7f")
 [node name="dash" parent="." instance=ExtResource("4_u2mg3")]
 
 [node name="Sword" type="Area2D" parent="."]
-script = ExtResource("7_jf1xj")
+script = ExtResource("7_fm8kl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
-position = Vector2(-15, 1)
-shape = SubResource("CircleShape2D_yhugj")
+position = Vector2(-13, 1)
+shape = SubResource("CapsuleShape2D_w520p")
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Sword" to="Sword" method="_on_body_entered"]

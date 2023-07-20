@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlh7inrghcn0i"
-path="res://.godot/imported/attack 1.png-bd219ca6544ccb886888ca8e165f6f6c.ctex"
+uid="uid://b3coow575ehmd"
+path="res://.godot/imported/walking animation 2.png-9d5cdd3f0a27788f5e51ee1fd26b4fa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost_samurai_assests/Attack/attack 1.png"
-dest_files=["res://.godot/imported/attack 1.png-bd219ca6544ccb886888ca8e165f6f6c.ctex"]
+source_file="res://Characters/walking animation 2.png"
+dest_files=["res://.godot/imported/walking animation 2.png-9d5cdd3f0a27788f5e51ee1fd26b4fa4.ctex"]
 
 [params]
 
