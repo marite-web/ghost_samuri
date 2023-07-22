@@ -9,13 +9,13 @@ height = 28.0
 
 [node name="testingattack" type="CharacterBody2D"]
 
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ixn8f")
+flip_h = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("CapsuleShape2D_f2qps")
 
 [node name="Damagable" type="Node" parent="."]
 script = ExtResource("2_inwg3")
-
-[node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_ixn8f")
-flip_h = true

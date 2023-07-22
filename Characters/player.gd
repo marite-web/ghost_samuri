@@ -69,19 +69,20 @@ func _physics_process(delta):
 			velocity.x = moving_dash * turn 
 		is_dashing = false
  
-	if Input.is_action_just_pressed("attack"):
-		animated_sprite.play("attack")
-		
 	set_soul_bar()
 	update_animation()
 	move_and_slide()
 	update_facing_direction()
 
 func _ready():
+	z_index = 100
 	bar.value = MAX_SOUL
+	
 
 func update_animation():
+	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
 	if Input.is_action_just_pressed("attack"):
+		get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = false
 		animated_sprite.play("attack")
 	elif Input.is_action_just_pressed("dash"):
 		animated_sprite.play("dash")
@@ -99,8 +100,11 @@ func end_game():
 
 func set_soul_bar():
 	bar.value = souls
+	if souls > 100:
+		souls = MAX_SOUL
 	if souls <= 0:
 		end_game()
+		
 
 func _on_soultimer_timeout():
 	souls -=5
@@ -108,3 +112,4 @@ func _on_soultimer_timeout():
 
 func _on_animated_sprite_2d_animation_finished():
 	animated_sprite.play("idle")
+	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true

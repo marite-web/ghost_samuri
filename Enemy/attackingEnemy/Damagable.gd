@@ -18,8 +18,12 @@ func hit(damage : float):
 	
 	if(health <= 0):
 		get_parent().queue_free()
-		Player.souls += 10
+		if Player.souls >= 90:
+			Player.souls += 100 - Player.souls
+		else:
+			Player.souls += 10
 		print(Player.souls)
+		
 		
 
 # I love you sm -k

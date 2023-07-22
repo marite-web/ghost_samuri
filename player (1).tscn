@@ -237,7 +237,7 @@ shape = SubResource("CapsuleShape2D_j0g7f")
 [node name="Sword" type="Area2D" parent="."]
 script = ExtResource("7_fm8kl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
+[node name="sword_collision" type="CollisionShape2D" parent="Sword"]
 position = Vector2(-13, 1)
 shape = SubResource("CapsuleShape2D_w520p")
 
