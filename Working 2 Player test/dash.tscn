@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5rw41ce7qott"]
+
+[ext_resource type="Script" path="res://dash.gd" id="1_lcpxj"]
+
+[node name="dash" type="Node2D"]
+script = ExtResource("1_lcpxj")
+
+[node name="dashtime" type="Timer" parent="."]
+one_shot = true
