@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crv7linqnc65i"]
+[gd_scene load_steps=11 format=3 uid="uid://crv7linqnc65i"]
 
 [ext_resource type="Texture2D" uid="uid://bkfik418iahf6" path="res://Ghost_samurai_assests/Assets/Tiles.png" id="1_wuyms"]
 [ext_resource type="PackedScene" uid="uid://dihpb24rgkj4v" path="res://player (1).tscn" id="2_iep0m"]
@@ -1429,6 +1429,9 @@ sources/0 = SubResource("TileSetAtlasSource_38ai7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsill"]
 size = Vector2(2, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02175"]
+size = Vector2(79, 41.1875)
+
 [node name="Test_Scene" type="Node2D"]
 position = Vector2(11, 127)
 
@@ -1463,6 +1466,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="soulbar" type="ProgressBar" parent="Camera2D/Control"]
 clip_contents = true
@@ -1473,6 +1477,7 @@ offset_top = -21.0
 offset_right = 13.0
 offset_bottom = -17.0
 show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [node name="Enemy" type="Area2D" parent="."]
 script = ExtResource("4_k48so")
@@ -1482,11 +1487,19 @@ move_direction = Vector2(-75, 2.08165e-12)
 position = Vector2(120, 82)
 texture = ExtResource("4_bgehy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+[node name="bullet_shape" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(120, 82)
 shape = SubResource("RectangleShape2D_lsill")
 
+[node name="enemy_space" type="Area2D" parent="Enemy"]
+position = Vector2(-2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy_space"]
+position = Vector2(88.5, 79)
+shape = SubResource("RectangleShape2D_02175")
+
 [node name="Enemy3" type="Area2D" parent="."]
+position = Vector2(-2, 2)
 script = ExtResource("4_k48so")
 move_direction = Vector2(36.5, 2.08165e-12)
 
@@ -1512,4 +1525,6 @@ position = Vector2(-84, 78)
 
 [connection signal="timeout" from="Player/soultimer" to="Player" method="_on_soultimer_timeout"]
 [connection signal="body_entered" from="Enemy" to="Enemy" method="_on_body_entered"]
+[connection signal="body_entered" from="Enemy/enemy_space" to="Player" method="_on_enemy_space_body_entered"]
+[connection signal="body_exited" from="Enemy/enemy_space" to="Player" method="_on_enemy_space_body_exited"]
 [connection signal="body_entered" from="Enemy3" to="Enemy3" method="_on_body_entered"]

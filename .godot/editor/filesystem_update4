@@ -4,3 +4,4 @@ res://Enemy/attackingEnemy/testingattack.tscn
 res://Characters/Sword.gd
 res://Enemy/attackingEnemy/Damagable.gd
 res://Characters/player.gd
+res://Levels/Enemy.gd

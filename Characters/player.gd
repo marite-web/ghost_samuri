@@ -17,6 +17,7 @@ const MAX_SOUL : int = 100
 @onready var timer = $soultimer
 @onready var bar = get_node("/root/Test_Scene/Camera2D/Control/soulbar")
 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped : bool = false
@@ -25,6 +26,7 @@ var is_dashing : bool = false
 var direction : Vector2 = Vector2.ZERO
 var moving : bool = false
 var souls : int = MAX_SOUL 
+var in_enemy_space : bool = false
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -104,7 +106,6 @@ func set_soul_bar():
 		souls = MAX_SOUL
 	if souls <= 0:
 		end_game()
-		
 
 func _on_soultimer_timeout():
 	souls -=5
@@ -113,3 +114,11 @@ func _on_soultimer_timeout():
 func _on_animated_sprite_2d_animation_finished():
 	animated_sprite.play("idle")
 	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
+
+func _on_enemy_space_body_entered(body):
+	in_enemy_space = true 
+	print("intered enemy space")
+
+func _on_enemy_space_body_exited(body):
+	in_enemy_space = false
+	print("left enemy space ")
