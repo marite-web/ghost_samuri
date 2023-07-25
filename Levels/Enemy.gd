@@ -16,11 +16,11 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	if Player.in_enemy_space == true: 
 		_bullet_movement(delta)
 	else: 
 		get_node("/root/Test_Scene/Enemy/bullet_shape").disabled == true
+		enemy.visible == false
 		
 		
 func _bullet_movement(delta):
