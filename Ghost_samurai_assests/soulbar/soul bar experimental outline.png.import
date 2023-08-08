@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccbte4uehr78l"
-path="res://.godot/imported/soulbar-progress.png-d346e6b24b30ee91efc30aee81e186e5.ctex"
+uid="uid://dgyjr03elhve5"
+path="res://.godot/imported/soul bar experimental outline.png-ab8eea350b1d0254f56f60fa6f1402a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost_samurai_assests/soulbar/soulbar-progress.png"
-dest_files=["res://.godot/imported/soulbar-progress.png-d346e6b24b30ee91efc30aee81e186e5.ctex"]
+source_file="res://Ghost_samurai_assests/soulbar/soul bar experimental outline.png"
+dest_files=["res://.godot/imported/soul bar experimental outline.png-ab8eea350b1d0254f56f60fa6f1402a8.ctex"]
 
 [params]
 

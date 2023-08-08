@@ -1,6 +1,6 @@
-TextureProgressBar
 CollisionShape2D
 Area2D
+TextureProgressBar
 Node
 Sprite2D
 CharacterBody2D

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bscu4f1smfmek"
-path="res://.godot/imported/soulbar_background.png-7fa7786820c7280d7b07b867bfb2ec53.ctex"
+uid="uid://iamvv0wet3po"
+path="res://.godot/imported/tilemap1_1.png-5f61b63e54656a47a513c152e125b2a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost_samurai_assests/soulbar/soulbar_background.png"
-dest_files=["res://.godot/imported/soulbar_background.png-7fa7786820c7280d7b07b867bfb2ec53.ctex"]
+source_file="res://Ghost_samurai_assests/Assets/new_tilemaps/tilemap1_1.png"
+dest_files=["res://.godot/imported/tilemap1_1.png-5f61b63e54656a47a513c152e125b2a4.ctex"]
 
 [params]
 

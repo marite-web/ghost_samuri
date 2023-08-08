@@ -27,6 +27,7 @@ var direction : Vector2 = Vector2.ZERO
 var moving : bool = false
 var souls : int = MAX_SOUL 
 var in_enemy_space : bool = false
+var in_enemy_space_other : bool = false
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -117,8 +118,17 @@ func _on_animated_sprite_2d_animation_finished():
 
 func _on_enemy_space_body_entered(body):
 	in_enemy_space = true 
-	print("intered enemy space")
+	print("In enemy Space")
 
 func _on_enemy_space_body_exited(body):
 	in_enemy_space = false
-	print("left enemy space ")
+	print("Left enemy Space")
+
+func _on_enemy_space_other_body_entered(body):
+	in_enemy_space_other = true
+	print(body)
+	print("In other enemy Space")
+
+func _on_enemy_space_other_body_exited(body):
+	in_enemy_space_other = false
+	print("Left other enemy Space")
