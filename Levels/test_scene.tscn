@@ -1217,27 +1217,9 @@ shape = SubResource("RectangleShape2D_02175")
 position = Vector2(171, 50)
 shape = SubResource("RectangleShape2D_r4ohi")
 
-[node name="Enemy3" type="Area2D" parent="."]
-position = Vector2(-2, 2)
-script = ExtResource("4_k48so")
-move_direction = Vector2(36.5, 2.08165e-12)
-
-[node name="Bullet" type="Sprite2D" parent="Enemy3"]
-position = Vector2(325, 84)
-texture = ExtResource("4_bgehy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3"]
-position = Vector2(325, 84)
-shape = SubResource("RectangleShape2D_lsill")
-
 [node name="SecurityGuard2" type="Sprite2D" parent="."]
 position = Vector2(123, 79)
 texture = ExtResource("5_xwuad")
-
-[node name="SecurityGuard4" type="Sprite2D" parent="."]
-position = Vector2(318, 81)
-texture = ExtResource("5_xwuad")
-flip_h = true
 
 [node name="testingattack" parent="." instance=ExtResource("6_hqg4g")]
 position = Vector2(-84, 78)
@@ -1248,4 +1230,3 @@ position = Vector2(-84, 78)
 [connection signal="body_exited" from="Enemy/enemy_space" to="Player" method="_on_enemy_space_body_exited"]
 [connection signal="body_entered" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_entered"]
 [connection signal="body_exited" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_exited"]
-[connection signal="body_entered" from="Enemy3" to="Enemy3" method="_on_body_entered"]

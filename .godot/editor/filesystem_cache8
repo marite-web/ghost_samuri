@@ -1,9 +1,9 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1691456332
+::res://::1692220248
 dash.gd::GDScript::-1::1688007338::0::1::::<>Node2D<>::
 dash.tscn::PackedScene::6914990029132156753::1687157436::0::1::::<><>::res://dash.gd
 icon.svg::CompressedTexture2D::566365987826601722::1686612406::1688080368::1::::<><>::
-player (1).tscn::PackedScene::7736137448857989155::1691456332::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://dlh7inrghcn0i<>uid://c047m2cw5ohwq<>uid://cdpj37tjfikf7<>uid://1cmaxt0faj10<>res://Characters/Sword.gd
+player (1).tscn::PackedScene::7736137448857989155::1691457668::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://dlh7inrghcn0i<>uid://c047m2cw5ohwq<>uid://cdpj37tjfikf7<>uid://1cmaxt0faj10<>res://Characters/Sword.gd
 testingattack.tscn::PackedScene::6218693843864222150::1689729965::0::1::::<><>::uid://mvnfa0yk4eke
 ::res://Characters/::1690427018
 player.gd::GDScript::-1::1690427018::0::1::::<>CharacterBody2D<>::
@@ -13,10 +13,10 @@ walking animation 2.png::CompressedTexture2D::4356713303431551415::1689802643::1
 ::res://Enemy/::1689828226
 bullet.png::CompressedTexture2D::808956076817457724::1687826348::1688080368::1::::<><>::
 security guard.png::CompressedTexture2D::886416346092201136::1687826638::1688080368::1::::<><>::
-::res://Enemy/attackingEnemy/::1691456332
+::res://Enemy/attackingEnemy/::1691457668
 Damagable.gd::GDScript::-1::1689984768::0::1::::Damagable<>Node<>::
-testingattack.tscn::PackedScene::913506889748118118::1691456332::0::1::::<><>::uid://mvnfa0yk4eke<>res://Enemy/attackingEnemy/Damagable.gd
-::res://ghost arting/::1691456613
+testingattack.tscn::PackedScene::913506889748118118::1691457668::0::1::::<><>::uid://mvnfa0yk4eke<>res://Enemy/attackingEnemy/Damagable.gd
+::res://ghost arting/::1691456628
 agent_shoot.png::CompressedTexture2D::7281933409920964113::1689985061::1689985087::1::::<><>::
 another soul another bar.png::CompressedTexture2D::2355201750299761472::1689985061::1689985087::1::::<><>::
 attack 1.png::CompressedTexture2D::3558538644376842941::1689985061::1689985087::1::::<><>::
@@ -69,7 +69,7 @@ walking animation 2.png::CompressedTexture2D::5014971730289846370::1686870370::1
 soul bar experimental fill.png::CompressedTexture2D::4841021401097255381::1690496193::1690496193::1::::<><>::
 soul bar experimental outline.png::CompressedTexture2D::7630518346971231714::1690496193::1690496193::1::::<><>::
 soulbar experimental background.png::CompressedTexture2D::3690858996732224260::1690496193::1690496193::1::::<><>::
-::res://Levels/::1691456332
+::res://Levels/::1691610929
 dash.tscn::PackedScene::1829768532541074913::1687135561::0::1::::<><>::res://dash.gd
 Enemy.gd::GDScript::-1::1690856549::0::1::::<>Area2D<>::
-test_scene.tscn::PackedScene::6011366670583201824::1691456332::0::1::::<><>::uid://cxts8dmoo5q5j<>uid://dihpb24rgkj4v<>uid://bst455fekke7e<>uid://dgyjr03elhve5<>uid://lr4ng8qrtoeu<>res://Levels/Enemy.gd<>uid://ca8a6d71xeubt<>uid://mvnfa0yk4eke<>uid://narlbyfnm6ik
+test_scene.tscn::PackedScene::6011366670583201824::1691610929::0::1::::<><>::uid://cxts8dmoo5q5j<>uid://dihpb24rgkj4v<>uid://bst455fekke7e<>uid://dgyjr03elhve5<>uid://lr4ng8qrtoeu<>res://Levels/Enemy.gd<>uid://ca8a6d71xeubt<>uid://mvnfa0yk4eke<>uid://narlbyfnm6ik
