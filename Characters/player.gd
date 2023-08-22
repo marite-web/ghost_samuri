@@ -18,6 +18,8 @@ const MAX_SOUL : int = 100
 @onready var bar = get_node("/root/Test_Scene/Camera2D/Control/soulbar")
 
 
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped : bool = false
@@ -33,6 +35,10 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if velocity.y < 0:
+			animated_sprite.play("jump")
+		elif velocity.y > 0:
+			animated_sprite.play("fall")
 	else: 
 		has_double_jumped = false
 
@@ -57,7 +63,6 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("dash"):
 		is_dashing = true
-		animated_sprite.play("dash")
 		souls -= 10
 		var turn;
 		if animated_sprite.flip_h == false:
@@ -84,8 +89,14 @@ func _ready():
 
 func update_animation():
 	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
+	get_node("/root/Test_Scene/Player/Sword2/sword_collision2").disabled = true
 	if Input.is_action_just_pressed("attack"):
-		get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = false
+		if animated_sprite.flip_h == false:
+			get_node("/root/Test_Scene/Player/Sword2/sword_collision2").disabled = false
+			print("yo")
+		elif animated_sprite.flip_h == true: 
+			get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = false
+			print("hey")
 		animated_sprite.play("attack")
 	elif Input.is_action_just_pressed("dash"):
 		animated_sprite.play("dash")
@@ -115,6 +126,7 @@ func _on_soultimer_timeout():
 func _on_animated_sprite_2d_animation_finished():
 	animated_sprite.play("idle")
 	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
+	get_node("/root/Test_Scene/Player/Sword2/sword_collision2").disabled = true
 
 func _on_enemy_space_body_entered(body):
 	in_enemy_space = true 

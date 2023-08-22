@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Enemy/attackingEnemy/Damagable.gd" id="2_inwg3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f2qps"]
-radius = 6.0
+radius = 7.0
 height = 28.0
 
 [node name="testingattack" type="CharacterBody2D"]

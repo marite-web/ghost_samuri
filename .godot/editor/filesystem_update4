@@ -2,3 +2,4 @@ res://Levels/test_scene.tscn
 res://Levels/Enemy.gd
 res://player (1).tscn
 res://Enemy/attackingEnemy/testingattack.tscn
+res://Characters/player.gd
