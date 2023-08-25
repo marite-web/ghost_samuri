@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2qq3o8jgy7iq"]
+
+[ext_resource type="Script" path="res://UI/game_over_screen.gd" id="1_3ngpp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0hkh"]
+bg_color = Color(0.305882, 0.0980392, 0.00392157, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.454902, 0.0470588, 0.0745098, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_lu76i"]
+
+[node name="GameOverScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_3ngpp")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v0hkh")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_lu76i")
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Restart" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/Buttons"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.364706, 0.364706, 0.364706, 1)
+theme_override_colors/font_outline_color = Color(0.737255, 0.752941, 0.709804, 1)
+theme_override_colors/icon_disabled_color = Color(0.45098, 0.423529, 0.27451, 1)
+theme_override_font_sizes/font_size = 50
+text = " -RESTART-
+"
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/Buttons"]
+layout_mode = 2
+theme_override_constants/h_separation = 60
+theme_override_font_sizes/font_size = 50
+text = "-QUIT-
+"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/Buttons/Quit" to="." method="_on_quit_pressed"]

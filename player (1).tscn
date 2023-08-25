@@ -165,7 +165,7 @@ animations = [{
 "speed": 30.0
 }, {
 "frames": [{
-"duration": 8.0,
+"duration": 2.0,
 "texture": ExtResource("4_thkr4")
 }],
 "loop": false,

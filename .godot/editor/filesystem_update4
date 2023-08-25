@@ -3,3 +3,5 @@ res://Levels/Enemy.gd
 res://player (1).tscn
 res://Enemy/attackingEnemy/testingattack.tscn
 res://Characters/player.gd
+res://UI/game_over_screen.gd
+res://UI/game_over_screen.tscn
