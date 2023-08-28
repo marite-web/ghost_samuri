@@ -83,6 +83,7 @@ func _physics_process(delta):
 func _ready():
 	z_index = 100
 	bar.value = MAX_SOUL
+	get_tree().paused = false
 
 func update_animation():
 	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
@@ -115,6 +116,8 @@ func set_soul_bar():
 		souls = MAX_SOUL
 	if souls <= 0:
 		end_game()
+		get_tree().paused = true
+
 
 func _on_soultimer_timeout():
 	souls -=5

@@ -1,9 +1,9 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1693186158
+::res://::1693200798
 dash.gd::GDScript::-1::1688007338::0::1::::<>Node2D<>::
 dash.tscn::PackedScene::6914990029132156753::1687157436::0::1::::<><>::res://dash.gd
 icon.svg::CompressedTexture2D::566365987826601722::1686612406::1688080368::1::::<><>::
-player (1).tscn::PackedScene::7736137448857989155::1693186158::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://dlh7inrghcn0i<>uid://c047m2cw5ohwq<>uid://cdpj37tjfikf7<>uid://cxdd3agln6fig<>uid://1cmaxt0faj10<>uid://hlyhj40v0h1s<>res://Characters/Sword.gd
+player (1).tscn::PackedScene::7736137448857989155::1693200798::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://dlh7inrghcn0i<>uid://c047m2cw5ohwq<>uid://cdpj37tjfikf7<>uid://cxdd3agln6fig<>uid://1cmaxt0faj10<>uid://hlyhj40v0h1s<>res://Characters/Sword.gd
 testingattack.tscn::PackedScene::6218693843864222150::1689729965::0::1::::<><>::uid://mvnfa0yk4eke
 ::res://Characters/::1692924706
 player.gd::GDScript::-1::1692924706::0::1::::<>CharacterBody2D<>::
@@ -13,29 +13,32 @@ walking animation 2.png::CompressedTexture2D::4356713303431551415::1689802643::1
 ::res://Enemy/::1689828226
 bullet.png::CompressedTexture2D::808956076817457724::1687826348::1688080368::1::::<><>::
 security guard.png::CompressedTexture2D::886416346092201136::1687826638::1688080368::1::::<><>::
-::res://Enemy/attackingEnemy/::1693186158
+::res://Enemy/attackingEnemy/::1693200798
 Damagable.gd::GDScript::-1::1689984768::0::1::::Damagable<>Node<>::
-testingattack.tscn::PackedScene::913506889748118118::1693186158::0::1::::<><>::uid://mvnfa0yk4eke<>res://Enemy/attackingEnemy/Damagable.gd
-::res://ghost arting/::1693185876
+testingattack.tscn::PackedScene::913506889748118118::1693200798::0::1::::<><>::uid://mvnfa0yk4eke<>res://Enemy/attackingEnemy/Damagable.gd
+::res://ghost arting/::1693201327
 agent_shoot.png::CompressedTexture2D::7281933409920964113::1689985061::1689985087::1::::<><>::
 another soul another bar.png::CompressedTexture2D::2355201750299761472::1689985061::1689985087::1::::<><>::
-attack 1.png::CompressedTexture2D::3558538644376842941::1689985061::1689985087::1::::<><>::
-bullet.png::CompressedTexture2D::439081069500253426::1689985061::1689985087::1::::<><>::
+attack 1.png::CompressedTexture2D::3558538644376842941::1693201327::1693201330::1::::<><>::
+block player 2.png::CompressedTexture2D::8905727326992425303::1693201327::1693201330::1::::<><>::
+block.png::CompressedTexture2D::6821430421505283066::1693201327::1693201330::1::::<><>::
+bullet.png::CompressedTexture2D::439081069500253426::1693201327::1693201330::1::::<><>::
 dash player 2.png::CompressedTexture2D::5269305505993251971::1691456613::1691456628::1::::<><>::
-dash.png::CompressedTexture2D::931264891289166201::1689985061::1689985087::1::::<><>::
+dash.png::CompressedTexture2D::931264891289166201::1693201327::1693201330::1::::<><>::
 elevator open.png::CompressedTexture2D::5365015531303700741::1693185876::1693185876::1::::<><>::
 elevator.png::CompressedTexture2D::488402775274980930::1693185876::1693185876::1::::<><>::
-falling player 2.png::CompressedTexture2D::6114356059806615183::1691456613::1691456628::1::::<><>::
-falling.png::CompressedTexture2D::6393610067317975762::1689985061::1689985087::1::::<><>::
+falling player 2.png::CompressedTexture2D::6114356059806615183::1693201327::1693201330::1::::<><>::
+falling.png::CompressedTexture2D::6393610067317975762::1693201327::1693201330::1::::<><>::
 full soul bar.png::CompressedTexture2D::3423144197767424117::1689985061::1689985087::1::::<><>::
 idle animation player 2.png::CompressedTexture2D::3938089234380228475::1691456613::1691456628::1::::<><>::
-idle animation.png::CompressedTexture2D::4461322690140401314::1689985061::1689985087::1::::<><>::
+idle animation.png::CompressedTexture2D::4461322690140401314::1693201327::1693201330::1::::<><>::
 jumping player 1.png::CompressedTexture2D::8041413505344355356::1691456613::1691456628::1::::<><>::
-jumping.png::CompressedTexture2D::515500287819033242::1689985061::1689985087::1::::<><>::
+jumping.png::CompressedTexture2D::515500287819033242::1693201327::1693201330::1::::<><>::
+just the elevtor.png::CompressedTexture2D::1212947500371164539::1693201327::1693201330::1::::<><>::
 just the soul part.png::CompressedTexture2D::7598197496648724270::1689985061::1689985087::1::::<><>::
 logo.png::CompressedTexture2D::6206069322228127414::1689985061::1689985087::1::::<><>::
-melee guard attack.png::CompressedTexture2D::5327287048330034810::1691456613::1691456628::1::::<><>::
-melee guard walk.png::CompressedTexture2D::3682445005605370667::1691456613::1691456628::1::::<><>::
+melee guard attack.png::CompressedTexture2D::5327287048330034810::1693201327::1693201330::1::::<><>::
+melee guard walk.png::CompressedTexture2D::3682445005605370667::1693201327::1693201330::1::::<><>::
 player 2 attack.png::CompressedTexture2D::809467902718820402::1691456613::1691456628::1::::<><>::
 security guard.png::CompressedTexture2D::3256920296675675130::1689985061::1689985087::1::::<><>::
 Soul bar - Copy.png::CompressedTexture2D::1692536523978244613::1689985061::1689985087::1::::<><>::
@@ -43,8 +46,8 @@ soul bar experimental fill.png::CompressedTexture2D::6297191645701263092::169145
 soul bar experimental outline.png::CompressedTexture2D::8966692502039142318::1691456613::1691456628::1::::<><>::
 Soul bar.png::CompressedTexture2D::8446759361042313816::1689985061::1689985087::1::::<><>::
 soulbar experimental background.png::CompressedTexture2D::4956130513511735165::1691456613::1691456628::1::::<><>::
-tilemap.png::CompressedTexture2D::969924489823331045::1689985061::1689985087::1::::<><>::
-walking animation 2.png::CompressedTexture2D::1768213320185284173::1689985061::1689985087::1::::<><>::
+tilemap.png::CompressedTexture2D::969924489823331045::1693201327::1693201330::1::::<><>::
+walking animation 2.png::CompressedTexture2D::1768213320185284173::1693201327::1693201330::1::::<><>::
 walking animation player 2.png::CompressedTexture2D::8013630114499751191::1691456613::1691456628::1::::<><>::
 ::res://Ghost_samurai_assests/::1689802690
 ::res://Ghost_samurai_assests/Assets/::1691455327
@@ -71,13 +74,13 @@ walking animation 2.png::CompressedTexture2D::5014971730289846370::1686870370::1
 soul bar experimental fill.png::CompressedTexture2D::4841021401097255381::1690496193::1690496193::1::::<><>::
 soul bar experimental outline.png::CompressedTexture2D::7630518346971231714::1690496193::1690496193::1::::<><>::
 soulbar experimental background.png::CompressedTexture2D::3690858996732224260::1690496193::1690496193::1::::<><>::
-::res://Levels/::1693186158
+::res://Levels/::1693200798
 dash.tscn::PackedScene::1829768532541074913::1687135561::0::1::::<><>::res://dash.gd
 Enemy.gd::GDScript::-1::1693185539::0::1::::<>Area2D<>::
-test_scene.tscn::PackedScene::6011366670583201824::1693186158::0::1::::<><>::uid://cxts8dmoo5q5j<>uid://dihpb24rgkj4v<>uid://bst455fekke7e<>uid://dgyjr03elhve5<>uid://lr4ng8qrtoeu<>res://Levels/Enemy.gd<>uid://ca8a6d71xeubt<>uid://mvnfa0yk4eke<>uid://narlbyfnm6ik
-::res://UI/::1693186554
+test_scene.tscn::PackedScene::6011366670583201824::1693200798::0::1::::<><>::uid://cxts8dmoo5q5j<>uid://dihpb24rgkj4v<>uid://bst455fekke7e<>uid://dgyjr03elhve5<>uid://lr4ng8qrtoeu<>res://Levels/Enemy.gd<>uid://ca8a6d71xeubt<>uid://mvnfa0yk4eke<>uid://narlbyfnm6ik
+::res://UI/::1693200826
 game_over_screen.gd::GDScript::-1::1692963924::0::1::::<>CanvasLayer<>::
-game_over_screen.tscn::PackedScene::6701992450514998560::1693186158::0::1::::<><>::res://UI/game_over_screen.gd<>uid://hlyhj40v0h1s<>uid://db0om5sjh71er
+game_over_screen.tscn::PackedScene::6701992450514998560::1693200826::0::1::::<><>::res://UI/game_over_screen.gd<>uid://cfogluifq7hm2<>uid://ynky31hp1l0w
 Handjet-Light.ttf::FontFile::1712020698254783796::1693186554::1693186555::1::::<><>::
 Handjet-Medium.ttf::FontFile::5153071882898016495::1693186554::1693186555::1::::<><>::
 RubikIso-Regular.ttf::FontFile::9073801096328549536::1693186383::1693186383::1::::<><>::
