@@ -16,8 +16,9 @@ const Game_Over_Screen = preload("res://UI/game_over_screen.tscn")
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer = $soultimer
 @onready var bar = get_node("/root/Test_Scene/Camera2D/Control/soulbar")
+@onready var bullet = preload("res://enemy.tscn")
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+#Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped : bool = false
 var locked_animation : bool = false
@@ -138,6 +139,8 @@ func enable_hitbox():
 	
 func _on_enemy_space_body_entered(body):
 	in_enemy_space = true 
+	var bullets = bullet.instantiate()
+	add_child(bullets)
 	print("In enemy Space")
 
 func _on_enemy_space_body_exited(body):
@@ -146,7 +149,6 @@ func _on_enemy_space_body_exited(body):
 
 func _on_enemy_space_other_body_entered(body):
 	in_enemy_space_other = true
-	print(body)
 	print("In other enemy Space")
 
 func _on_enemy_space_other_body_exited(body):

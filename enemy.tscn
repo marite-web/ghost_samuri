@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://nuoy2ynjj1oe"]
+
+[ext_resource type="Script" path="res://Levels/Enemy.gd" id="1_fq3a7"]
+[ext_resource type="Texture2D" uid="uid://lr4ng8qrtoeu" path="res://Enemy/bullet.png" id="2_dwr7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsill"]
+size = Vector2(2, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02175"]
+size = Vector2(72.25, 78.5938)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4ohi"]
+size = Vector2(75, 79)
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_fq3a7")
+move_direction = Vector2(-75, 2.08165e-12)
+
+[node name="Bullet" type="Sprite2D" parent="."]
+position = Vector2(120, 82)
+texture = ExtResource("2_dwr7g")
+
+[node name="bullet_shape" type="CollisionShape2D" parent="."]
+position = Vector2(120, 82)
+shape = SubResource("RectangleShape2D_lsill")
+
+[node name="enemy_space" type="Area2D" parent="."]
+position = Vector2(-2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_space"]
+position = Vector2(76, 49)
+shape = SubResource("RectangleShape2D_02175")
+
+[node name="enemy_space_other" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_space_other"]
+position = Vector2(171, 50)
+shape = SubResource("RectangleShape2D_r4ohi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
