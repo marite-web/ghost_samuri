@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://crv7linqnc65i"]
+[gd_scene load_steps=13 format=3 uid="uid://crv7linqnc65i"]
 
 [ext_resource type="Texture2D" uid="uid://cxts8dmoo5q5j" path="res://Ghost_samurai_assests/Assets/new_tilemaps/tilemap_3.png" id="1_dlntx"]
 [ext_resource type="PackedScene" uid="uid://dihpb24rgkj4v" path="res://player (1).tscn" id="2_iep0m"]
 [ext_resource type="Texture2D" uid="uid://bst455fekke7e" path="res://Ghost_samurai_assests/soulbar/soulbar experimental background.png" id="3_vcndf"]
 [ext_resource type="Texture2D" uid="uid://dgyjr03elhve5" path="res://Ghost_samurai_assests/soulbar/soul bar experimental outline.png" id="4_2papx"]
-[ext_resource type="Texture2D" uid="uid://lr4ng8qrtoeu" path="res://Enemy/bullet.png" id="4_bgehy"]
 [ext_resource type="Script" path="res://Levels/Enemy.gd" id="4_k48so"]
 [ext_resource type="Texture2D" uid="uid://ca8a6d71xeubt" path="res://Ghost_samurai_assests/soulbar/soul bar experimental fill.png" id="5_hdwqq"]
 [ext_resource type="Texture2D" uid="uid://mvnfa0yk4eke" path="res://Enemy/security guard.png" id="5_xwuad"]
@@ -1128,9 +1127,6 @@ texture = ExtResource("1_dlntx")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s3bnj")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsill"]
-size = Vector2(2, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02175"]
 size = Vector2(72.25, 78.5938)
 
@@ -1196,19 +1192,11 @@ texture_progress_offset = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("4_k48so")
 move_direction = Vector2(-75, 2.08165e-12)
 
-[node name="Bullet" type="Sprite2D" parent="Enemy"]
-position = Vector2(120, 82)
-texture = ExtResource("4_bgehy")
-
-[node name="bullet_shape" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(120, 82)
-shape = SubResource("RectangleShape2D_lsill")
-
 [node name="enemy_space" type="Area2D" parent="Enemy"]
 position = Vector2(-2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy_space"]
-position = Vector2(76, 49)
+position = Vector2(79, 48)
 shape = SubResource("RectangleShape2D_02175")
 
 [node name="enemy_space_other" type="Area2D" parent="Enemy"]
@@ -1217,7 +1205,7 @@ shape = SubResource("RectangleShape2D_02175")
 position = Vector2(171, 50)
 shape = SubResource("RectangleShape2D_r4ohi")
 
-[node name="SecurityGuard2" type="Sprite2D" parent="."]
+[node name="SecurityGuard2" type="Sprite2D" parent="Enemy"]
 position = Vector2(123, 79)
 texture = ExtResource("5_xwuad")
 
