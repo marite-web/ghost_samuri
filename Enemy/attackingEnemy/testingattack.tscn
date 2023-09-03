@@ -8,6 +8,8 @@ radius = 7.0
 height = 28.0
 
 [node name="testingattack" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_ixn8f")

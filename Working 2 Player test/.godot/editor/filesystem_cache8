@@ -1,0 +1,40 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1693430962
+dash.gd::GDScript::-1::1693430769::0::1::::<>Node2D<>::
+dash.tscn::PackedScene::6914990029132156753::1693430769::0::1::::<><>::res://dash.gd
+icon.svg::CompressedTexture2D::566365987826601722::1693430769::1693430963::1::::<><>::
+player2.gd::GDScript::-1::1693430769::0::1::::<>CharacterBody2D<>::
+player (1).tscn::PackedScene::7736137448857989155::1693430769::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://cdpj37tjfikf7<>uid://1cmaxt0faj10
+::res://Characters/::1693430931
+player.gd::GDScript::-1::1693430769::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::7736137448857989155::1693430769::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://c047m2cw5ohwq<>uid://cdpj37tjfikf7<>uid://1cmaxt0faj10
+::res://Enemy/::1693430940
+bullet.png::CompressedTexture2D::808956076817457724::1693430769::1693430963::1::::<><>::
+security guard.png::CompressedTexture2D::886416346092201136::1693430769::1693430963::1::::<><>::
+::res://Ghost_samurai_assests/::1693430952
+::res://Ghost_samurai_assests/Assets/::1693430952
+Buildings.png::CompressedTexture2D::332322602288268786::1693430769::1693430963::1::::<><>::
+Hive.png::CompressedTexture2D::4849493757746995466::1693430769::1693430963::1::::<><>::
+Interior-01.png::CompressedTexture2D::8372924731692953562::1693430769::1693430963::1::::<><>::
+Props-Rocks.png::CompressedTexture2D::1321964341192326392::1693430769::1693430963::1::::<><>::
+Tiles.png::CompressedTexture2D::3099136167577041413::1693430769::1693430963::1::::<><>::
+Tree-Assets.png::CompressedTexture2D::4873428043018284624::1693430769::1693430963::1::::<><>::
+::res://Ghost_samurai_assests/Attack/::1693430952
+attack 1.png::CompressedTexture2D::6631282107643647445::1693430769::1693430963::1::::<><>::
+::res://Ghost_samurai_assests/Character/::1693430952
+::res://Ghost_samurai_assests/Character/dash/::1693430952
+dash.png::CompressedTexture2D::6589395208760422056::1693430769::1693430963::1::::<><>::
+::res://Ghost_samurai_assests/Character/Idle/::1693430952
+idle animation.png::CompressedTexture2D::8252630952874124945::1693430769::1693430963::1::::<><>::
+::res://Ghost_samurai_assests/Character/walking/::1693430952
+walking animation 2.png::CompressedTexture2D::5014971730289846370::1693430769::1693430963::1::::<><>::
+::res://Ghost_samurai_assests/soulbar/::1693430952
+Soul bar - empty.png::CompressedTexture2D::4616244008110944204::1693430769::1693430963::1::::<><>::
+soulbar-empty-2.png::CompressedTexture2D::1721186129024317045::1693430769::1693430963::1::::<><>::
+soulbar-fill.png::CompressedTexture2D::1948740028430472085::1693430769::1693430963::1::::<><>::
+soulbar-progress.png::CompressedTexture2D::4916445752719553893::1693430769::1693430963::1::::<><>::
+soulbar_background.png::CompressedTexture2D::3655215056180124522::1693430769::1693430963::1::::<><>::
+::res://Levels/::1693430940
+dash.tscn::PackedScene::1829768532541074913::1693430769::0::1::::<><>::res://dash.gd
+Enemy.gd::GDScript::-1::1693430769::0::1::::<>Area2D<>::
+test_scene.tscn::PackedScene::6011366670583201824::1693430769::0::1::::<><>::uid://bkfik418iahf6<>uid://dihpb24rgkj4v<>res://player2.gd
