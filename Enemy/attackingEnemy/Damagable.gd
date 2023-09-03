@@ -2,12 +2,13 @@ extends Node
 
 class_name Damagable 
 
-@onready var Sprite = get_node("/root/Test_Scene/testingattack/Sprite")
 @onready var Player = get_node("/root/Test_Scene/Player")
+@onready var Sprite = get_node("/root/Test_Scene/testingattack/Sprite")
 @export var health : float = 20 
 
 
-func hit(damage : float):
+func hit(damage : float): #sprite):
+	#var Sprite = sprite
 	print(health)
 	print(Player.souls)
 	health -= damage
