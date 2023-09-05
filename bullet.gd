@@ -1,8 +1,8 @@
 extends Area2D
 
 @export var speed = 150
-@onready var Player = get_node("/root/Test_Scene/Player")
-@onready var guard = get_node("/root/Test_Scene/Enemy/security/security_guard")
+@onready var Player = get_node("/root/level_1/Player")
+@onready var guard = get_node("/root/level_1/Enemy/security/security_guard")
 @onready var bul: AnimatedSprite2D = $AnimatedSprite2D
 
 var x = 0

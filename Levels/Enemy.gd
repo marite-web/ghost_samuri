@@ -2,9 +2,9 @@ extends Area2D
 
 @export var move_velocity : float = 130.0
 @export var move_direction : Vector2 
-@onready var Player = get_node("/root/Test_Scene/Player")
-@onready var enemy = get_node("/root/Test_Scene/Enemy/Bullet")
-@onready var security = get_node("/root/Test_Scene/Enemy/security/security_guard")
+@onready var Player = get_node("/root/level_1/Player")
+@onready var enemy = get_node("/root/level_1/Enemy/Bullet")
+@onready var security = get_node("/root/level_1/Enemy/security/security_guard")
 
 var can_fire = true
 var bullet = preload("res://bullet.tscn")

@@ -15,7 +15,7 @@ const Game_Over_Screen = preload("res://UI/game_over_screen.tscn")
 @onready var dash = $dash
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer = $soultimer
-@onready var bar = get_node("/root/Test_Scene/Camera2D/Control/soulbar")
+@onready var bar = get_node("/root/level_1/Camera2D/Control/soulbar")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -85,8 +85,8 @@ func _ready():
 	get_tree().paused = false
 
 func update_animation():
-	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
-	get_node("/root/Test_Scene/Player/Sword2/sword_collision2").disabled = true
+	get_node("/root/level_1/Player/Sword/sword_collision").disabled = true
+	get_node("/root/level_1/Player/Sword2/sword_collision2").disabled = true
 	if attacking == true:
 		animated_sprite.play("attack")
 	elif Input.is_action_just_pressed("attack"):
@@ -125,14 +125,14 @@ func _on_animated_sprite_2d_animation_finished():
 	is_dashing = false
 	attacking = false
 	animated_sprite.play("idle")
-	get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = true
-	get_node("/root/Test_Scene/Player/Sword2/sword_collision2").disabled = true
+	get_node("/root/level_1/Player/Sword/sword_collision").disabled = true
+	get_node("/root/level_1/Player/Sword2/sword_collision2").disabled = true
 
 func enable_hitbox():
 	if animated_sprite.flip_h == false:
-		get_node("/root/Test_Scene/Player/Sword2/sword_collision2").disabled = false
+		get_node("/root/level_1/Player/Sword2/sword_collision2").disabled = false
 	elif animated_sprite.flip_h == true: 
-		get_node("/root/Test_Scene/Player/Sword/sword_collision").disabled = false
+		get_node("/root/level_1/Player/Sword/sword_collision").disabled = false
 	
 func _on_enemy_space_body_entered(body):
 	in_enemy_space = true 

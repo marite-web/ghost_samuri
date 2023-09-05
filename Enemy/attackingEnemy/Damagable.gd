@@ -2,8 +2,8 @@ extends Node
 
 class_name Damagable 
 
-@onready var Player = get_node("/root/Test_Scene/Player")
-@onready var Sprite = get_node("/root/Test_Scene/testingattack/Sprite")
+@onready var Player = get_node("/root/level_1/Player")
+@onready var Sprite = get_node("/root/level_1/testingattack/Sprite")
 @export var health : float = 20 
 
 
