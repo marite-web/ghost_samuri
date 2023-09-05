@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://crv7linqnc65i"]
+[gd_scene load_steps=38 format=3 uid="uid://crv7linqnc65i"]
 
 [ext_resource type="Texture2D" uid="uid://cxts8dmoo5q5j" path="res://Ghost_samurai_assests/Assets/new_tilemaps/tilemap_3.png" id="1_dlntx"]
 [ext_resource type="PackedScene" uid="uid://dihpb24rgkj4v" path="res://player (1).tscn" id="2_iep0m"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://db0om5sjh71er" path="res://ghost arting/agent_shoot.png" id="8_brwan"]
 [ext_resource type="Script" path="res://Levels/Exit.gd" id="10_cl7p7"]
 [ext_resource type="Texture2D" uid="uid://g7t6mieree1o" path="res://ghost arting/elevator.png" id="10_s6sqm"]
+[ext_resource type="Texture2D" uid="uid://y4cg70qc5g85" path="res://ghost arting/elevator doorz.png" id="11_kddvk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3bnj"]
 texture = ExtResource("1_dlntx")
@@ -1157,11 +1158,77 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8aj7"]
 radius = 4.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4vi32"]
-animations = []
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5s6tj"]
-size = Vector2(39, 43)
+size = Vector2(15, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etpcj"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(117, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y872y"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(78, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8np05"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(39, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8rxk"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(0, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haipj"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(0, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6aq0g"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(39, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpqjp"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(78, 0, 39, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mitee"]
+atlas = ExtResource("11_kddvk")
+region = Rect2(117, 0, 39, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vi32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etpcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y872y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8np05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8rxk")
+}],
+"loop": false,
+"name": &"closing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haipj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6aq0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpqjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mitee")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5onr4"]
 atlas = ExtResource("10_s6sqm")
@@ -1210,7 +1277,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7e1sy")
 }],
-"loop": true,
+"loop": false,
 "name": &"closing",
 "speed": 5.0
 }, {
@@ -1227,7 +1294,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0qqq0")
 }],
-"loop": true,
+"loop": false,
 "name": &"opening",
 "speed": 5.0
 }]
@@ -1249,6 +1316,7 @@ layer_1/z_index = 100000
 layer_1/tile_data = PackedInt32Array(589841, 786432, 8, 589840, 786432, 7, 589839, 786432, 7, 589838, 786432, 7, 589837, 786432, 7, 589836, 786432, 7, 589835, 786432, 7, 589842, 851968, 7, 589834, 720896, 9, 655378, 917504, 8, 720914, 917504, 9, 786450, 917504, 11, 524298, 851968, 7, 524297, 786432, 7, 524296, 786432, 7, 524295, 786432, 7, 524294, 786432, 7, 524293, 786432, 7, 524292, 786432, 7, 524291, 786432, 7, 524290, 786432, 7, 524289, 917504, 10, 589825, 917504, 11, 655361, 917504, 11, 720897, 917504, 11, 458753, 917504, 11, 393217, 851968, 7, 393216, 786432, 7, 458751, 786432, 7, 458750, 786432, 7, 458749, 786432, 7, 458748, 786432, 7, 458747, 786432, 9, 524283, 917504, 11, 589819, 917504, 11, 655355, 917504, 11, 720913, 851968, 9, 720912, 786432, 7, 720911, 786432, 7, 720910, 786432, 7, 720909, 786432, 7, 720908, 786432, 7, 720907, 786432, 7, 720906, 786432, 7, 720905, 786432, 7, 720904, 786432, 7, 720903, 786432, 7, 720902, 786432, 7, 720901, 720896, 9, 655365, 917504, 11, 589829, 851968, 7, 589828, 786432, 7, 589827, 786432, 7, 589826, 720896, 8, 655362, 917504, 11, 720898, 917504, 11, 786434, 720896, 9, 786435, 786432, 7, 786436, 786432, 7, 786437, 786432, 7, 786438, 786432, 7, 786439, 786432, 7, 786440, 786432, 7, 786441, 786432, 7, 786442, 786432, 7, 786443, 786432, 7, 786444, 786432, 7, 786445, 786432, 7, 786446, 786432, 7, 786447, 851968, 7, 851983, 720896, 9, 851984, 786432, 7, 851985, 786432, 7, 851986, 786432, 7, 851987, 786432, 7, 851988, 786432, 7, 851989, 786432, 7, 851990, 786432, 7, 851991, 786432, 7, 851992, 786432, 7, 851993, 786432, 7, 851994, 851968, 7, 720891, 720896, 9, 720892, 786432, 7, 720893, 786432, 7, 720894, 786432, 7, 720895, 851968, 7, 786431, 917504, 11, 851967, 917504, 11, 917503, 851968, 8, 917502, 786432, 7, 917501, 786432, 7, 917500, 786432, 7, 917499, 786432, 7, 917498, 786432, 7, 917497, 786432, 7, 917496, 786432, 7, 917495, 786432, 7, 917494, 720896, 9, 851958, 917504, 11, 786422, 917504, 11, 720886, 917504, 11, 655350, 917504, 11, 589814, 917504, 11, 524278, 917504, 11, 458739, 720896, 9, 458742, 851968, 7, 458741, 786432, 7, 458740, 786432, 7)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_iep0m")]
+z_index = 1
 position = Vector2(-297, 39)
 fallen_distance = Vector2(2.08165e-12, 200)
 
@@ -1276,6 +1344,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="soulbar" type="TextureProgressBar" parent="Camera2D/Control"]
+z_index = 10
 layout_mode = 0
 offset_left = -29.0
 offset_top = -28.0
@@ -1327,21 +1396,26 @@ shape = SubResource("CapsuleShape2D_k8aj7")
 position = Vector2(-130, 79)
 
 [node name="Exit" type="Area2D" parent="."]
+process_mode = 3
 position = Vector2(611, 41)
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("10_cl7p7")
 
-[node name="front" type="AnimatedSprite2D" parent="Exit"]
-position = Vector2(0, -5)
-sprite_frames = SubResource("SpriteFrames_4vi32")
-animation = &""
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(0, -1.5)
+z_index = 5
+position = Vector2(11.5, -2)
 shape = SubResource("RectangleShape2D_5s6tj")
 
-[node name="back" type="AnimatedSprite2D" parent="Exit"]
+[node name="sprite1" type="AnimatedSprite2D" parent="Exit"]
+z_index = 4
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_4vi32")
+animation = &"opening"
+
+[node name="sprite2" type="AnimatedSprite2D" parent="Exit"]
+z_index = 1
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_kk14b")
 animation = &"closing"
 
@@ -1352,4 +1426,3 @@ animation = &"closing"
 [connection signal="body_entered" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_entered"]
 [connection signal="body_exited" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_exited"]
 [connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
-[connection signal="body_exited" from="Exit" to="Exit" method="_on_body_exited"]

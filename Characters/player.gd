@@ -81,7 +81,6 @@ func _physics_process(delta):
 	update_facing_direction()
 
 func _ready():
-	z_index = 100
 	bar.value = MAX_SOUL
 	get_tree().paused = false
 
