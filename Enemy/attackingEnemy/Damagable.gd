@@ -26,5 +26,7 @@ func hit(damage : float): #sprite):
 		print(Player.souls)
 		
 		
+		
+		
 
 # I love you sm -k
