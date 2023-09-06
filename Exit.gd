@@ -7,6 +7,7 @@ extends Area2D
 @onready var at_exit : bool = false
 
 const FILE_BEGIN = "res://Levels/level_"
+const Game_Over_Screen = preload("res://UI/game_over_screen.tscn")
 
 var end_position : Vector2
 
@@ -30,5 +31,9 @@ func _on_body_entered(body):
 		animated_sprite1.z_index = 13
 		animated_sprite1.play("closing")
 		animated_sprite2.play("closing")
-		await get_tree().create_timer(1).timeout
-		get_tree().change_scene_to_file(next_level_path)
+		if next_level_number > 3:
+			var game_over = Game_Over_Screen.instantiate()
+			add_child(game_over)
+		else:
+			await get_tree().create_timer(1).timeout
+			get_tree().change_scene_to_file(next_level_path)

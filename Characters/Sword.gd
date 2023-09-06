@@ -5,6 +5,6 @@ extends Area2D
 func _on_body_entered(body):
 	for child in body.get_children():
 		if child is Damagable:
-			#var sprite = body_entered
+			var sprite = body
 			print("hit")
-			child.hit(damage) #, sprite)
+			child.hit(damage, sprite)

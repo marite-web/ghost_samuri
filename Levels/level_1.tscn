@@ -1356,7 +1356,16 @@ position = Vector2(121, 81)
 shape = SubResource("CapsuleShape2D_k8aj7")
 
 [node name="testingattack" parent="." instance=ExtResource("9_8bqow")]
-position = Vector2(-130, 79)
+position = Vector2(-121, 79)
+
+[node name="testingattack2" parent="." instance=ExtResource("9_8bqow")]
+position = Vector2(7, 77)
+
+[node name="testingattack3" parent="." instance=ExtResource("9_8bqow")]
+position = Vector2(320, 79)
+
+[node name="testingattack4" parent="." instance=ExtResource("9_8bqow")]
+position = Vector2(474, 77)
 
 [node name="Exit" parent="." instance=ExtResource("10_33ik3")]
 
