@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbdepopb2lv3w"
-path="res://.godot/imported/Hive.png-5587ed007d48479da779427bc76ab2b1.ctex"
+uid="uid://xi3pssmedo70"
+path="res://.godot/imported/industrial.v1.png-cb9164f3463a2bebe366718b83481e78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost_samurai_assests/Assets/Hive.png"
-dest_files=["res://.godot/imported/Hive.png-5587ed007d48479da779427bc76ab2b1.ctex"]
+source_file="res://ghost arting/industrial.v1.png"
+dest_files=["res://.godot/imported/industrial.v1.png-cb9164f3463a2bebe366718b83481e78.ctex"]
 
 [params]
 

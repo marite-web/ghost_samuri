@@ -1,6 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://crv7linqnc65i"]
+[gd_scene load_steps=19 format=3 uid="uid://crv7linqnc65i"]
 
-[ext_resource type="Texture2D" uid="uid://cxts8dmoo5q5j" path="res://Ghost_samurai_assests/Assets/new_tilemaps/tilemap_3.png" id="1_vss0j"]
+[ext_resource type="Texture2D" uid="uid://n23rq6nqwfjp" path="res://ghost arting/tilemap.png" id="1_5h6kq"]
 [ext_resource type="PackedScene" uid="uid://dihpb24rgkj4v" path="res://player (1).tscn" id="2_0rqd2"]
 [ext_resource type="Texture2D" uid="uid://bst455fekke7e" path="res://Ghost_samurai_assests/soulbar/soulbar experimental background.png" id="3_78150"]
 [ext_resource type="Texture2D" uid="uid://dgyjr03elhve5" path="res://Ghost_samurai_assests/soulbar/soul bar experimental outline.png" id="4_bc48i"]
@@ -9,12 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://bmnxabw08ta23" path="res://ghost arting/security guard.png" id="7_qh0vw"]
 [ext_resource type="Texture2D" uid="uid://db0om5sjh71er" path="res://ghost arting/agent_shoot.png" id="8_nbj34"]
 [ext_resource type="PackedScene" uid="uid://narlbyfnm6ik" path="res://Enemy/attackingEnemy/testingattack.tscn" id="9_8bqow"]
-[ext_resource type="Script" path="res://Levels/Exit.gd" id="10_yux3m"]
-[ext_resource type="Texture2D" uid="uid://y4cg70qc5g85" path="res://ghost arting/elevator doorz.png" id="11_cgnwu"]
-[ext_resource type="Texture2D" uid="uid://g7t6mieree1o" path="res://ghost arting/elevator.png" id="12_xut12"]
+[ext_resource type="PackedScene" uid="uid://chu0j0ajwlpk3" path="res://exit.tscn" id="10_33ik3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pl0mm"]
+load_path = "res://.godot/imported/tilemap_3.png-ea53126cab7c1147080f19fd73bbc603.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3bnj"]
-texture = ExtResource("1_vss0j")
+texture = SubResource("CompressedTexture2D_pl0mm")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1127,10 +1128,106 @@ texture = ExtResource("1_vss0j")
 7:22/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:22/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02fbu"]
+resource_name = "office"
+texture = ExtResource("1_5h6kq")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+7:0/0 = 0
+7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:0/0/physics_layer_0/angular_velocity = 0.0
+8:0/0 = 0
+8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:0/0/physics_layer_0/angular_velocity = 0.0
+9:0/0 = 0
+9:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+7:1/0 = 0
+7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0 = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/size_in_atlas = Vector2i(2, 2)
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_48v8q"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_s3bnj")
+sources/1 = SubResource("TileSetAtlasSource_02fbu")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02175"]
 size = Vector2(72.25, 78.5938)
@@ -1158,147 +1255,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8aj7"]
 radius = 4.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s6tj"]
-size = Vector2(15, 43)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_etpcj"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(117, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y872y"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(78, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8np05"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(39, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g8rxk"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(0, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_haipj"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(0, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6aq0g"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(39, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lpqjp"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(78, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mitee"]
-atlas = ExtResource("11_cgnwu")
-region = Rect2(117, 0, 39, 49)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4vi32"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_etpcj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y872y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8np05")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g8rxk")
-}],
-"loop": false,
-"name": &"closing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_haipj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6aq0g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lpqjp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mitee")
-}],
-"loop": false,
-"name": &"opening",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5onr4"]
-atlas = ExtResource("12_xut12")
-region = Rect2(117, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2bysm"]
-atlas = ExtResource("12_xut12")
-region = Rect2(78, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uvoqs"]
-atlas = ExtResource("12_xut12")
-region = Rect2(39, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7e1sy"]
-atlas = ExtResource("12_xut12")
-region = Rect2(0, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7gdi8"]
-atlas = ExtResource("12_xut12")
-region = Rect2(0, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hob8k"]
-atlas = ExtResource("12_xut12")
-region = Rect2(39, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_58wdt"]
-atlas = ExtResource("12_xut12")
-region = Rect2(78, 0, 39, 49)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0qqq0"]
-atlas = ExtResource("12_xut12")
-region = Rect2(117, 0, 39, 49)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kk14b"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5onr4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2bysm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uvoqs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7e1sy")
-}],
-"loop": false,
-"name": &"closing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7gdi8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hob8k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_58wdt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0qqq0")
-}],
-"loop": false,
-"name": &"opening",
-"speed": 5.0
-}]
-
 [node name="level_1" type="Node2D"]
 position = Vector2(-40, 64)
 
@@ -1312,8 +1268,15 @@ layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
-layer_1/z_index = 100000
+layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array(589841, 786432, 8, 589840, 786432, 7, 589839, 786432, 7, 589838, 786432, 7, 589837, 786432, 7, 589836, 786432, 7, 589835, 786432, 7, 589842, 851968, 7, 589834, 720896, 9, 655378, 917504, 8, 720914, 917504, 9, 786450, 917504, 11, 524298, 851968, 7, 524297, 786432, 7, 524296, 786432, 7, 524295, 786432, 7, 524294, 786432, 7, 524293, 786432, 7, 524292, 786432, 7, 524291, 786432, 7, 524290, 786432, 7, 524289, 917504, 10, 589825, 917504, 11, 655361, 917504, 11, 720897, 917504, 11, 458753, 917504, 11, 393217, 851968, 7, 393216, 786432, 7, 458751, 786432, 7, 458750, 786432, 7, 458749, 786432, 7, 458748, 786432, 7, 458747, 786432, 9, 524283, 917504, 11, 589819, 917504, 11, 655355, 917504, 11, 720913, 851968, 9, 720912, 786432, 7, 720911, 786432, 7, 720910, 786432, 7, 720909, 786432, 7, 720908, 786432, 7, 720907, 786432, 7, 720906, 786432, 7, 720905, 786432, 7, 720904, 786432, 7, 720903, 786432, 7, 720902, 786432, 7, 720901, 720896, 9, 655365, 917504, 11, 589829, 851968, 7, 589828, 786432, 7, 589827, 786432, 7, 589826, 720896, 8, 655362, 917504, 11, 720898, 917504, 11, 786434, 720896, 9, 786435, 786432, 7, 786436, 786432, 7, 786437, 786432, 7, 786438, 786432, 7, 786439, 786432, 7, 786440, 786432, 7, 786441, 786432, 7, 786442, 786432, 7, 786443, 786432, 7, 786444, 786432, 7, 786445, 786432, 7, 786446, 786432, 7, 786447, 851968, 7, 851983, 720896, 9, 851984, 786432, 7, 851985, 786432, 7, 851986, 786432, 7, 851987, 786432, 7, 851988, 786432, 7, 851989, 786432, 7, 851990, 786432, 7, 851991, 786432, 7, 851992, 786432, 7, 851993, 786432, 7, 851994, 851968, 7, 720891, 720896, 9, 720892, 786432, 7, 720893, 786432, 7, 720894, 786432, 7, 720895, 851968, 7, 786431, 917504, 11, 851967, 917504, 11, 917503, 851968, 8, 917502, 786432, 7, 917501, 786432, 7, 917500, 786432, 7, 917499, 786432, 7, 917498, 786432, 7, 917497, 786432, 7, 917496, 786432, 7, 917495, 786432, 7, 917494, 720896, 9, 851958, 917504, 11, 786422, 917504, 11, 720886, 917504, 11, 655350, 917504, 11, 589814, 917504, 11, 524278, 917504, 11, 458739, 720896, 9, 458742, 851968, 7, 458741, 786432, 7, 458740, 786432, 7)
+layer_2/name = "Forground"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 1
+layer_2/tile_data = PackedInt32Array(327677, 1, 5, 262154, 1, 5, 262171, 1, 5, 327666, 1, 5)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_0rqd2")]
 z_index = 1
@@ -1395,29 +1358,7 @@ shape = SubResource("CapsuleShape2D_k8aj7")
 [node name="testingattack" parent="." instance=ExtResource("9_8bqow")]
 position = Vector2(-130, 79)
 
-[node name="Exit" type="Area2D" parent="."]
-process_mode = 3
-position = Vector2(611, 41)
-collision_layer = 4
-collision_mask = 5
-script = ExtResource("10_yux3m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-z_index = 5
-position = Vector2(11.5, -2)
-shape = SubResource("RectangleShape2D_5s6tj")
-
-[node name="sprite1" type="AnimatedSprite2D" parent="Exit"]
-z_index = 4
-position = Vector2(0, -5)
-sprite_frames = SubResource("SpriteFrames_4vi32")
-animation = &"opening"
-
-[node name="sprite2" type="AnimatedSprite2D" parent="Exit"]
-z_index = 1
-position = Vector2(0, -5)
-sprite_frames = SubResource("SpriteFrames_kk14b")
-animation = &"closing"
+[node name="Exit" parent="." instance=ExtResource("10_33ik3")]
 
 [connection signal="timeout" from="Player/soultimer" to="Player" method="_on_soultimer_timeout"]
 [connection signal="body_entered" from="Enemy" to="Enemy" method="_on_body_entered"]
@@ -1425,4 +1366,3 @@ animation = &"closing"
 [connection signal="body_exited" from="Enemy/enemy_space" to="Player" method="_on_enemy_space_body_exited"]
 [connection signal="body_entered" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_entered"]
 [connection signal="body_exited" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_exited"]
-[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
