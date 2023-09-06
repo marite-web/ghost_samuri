@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1693967810
+::res://::1693968216
 bullet.gd::GDScript::-1::1693877367::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::5442757477410730758::1693967810::0::1::::<><>::res://bullet.gd<>uid://gixuo3hvic1g
 dash.gd::GDScript::-1::1693430769::0::1::::<>Node2D<>::
@@ -8,7 +8,6 @@ Exit.gd::GDScript::-1::1693954684::0::1::::<>Area2D<>::
 exit.tscn::PackedScene::5306986138420451844::1693955396::0::1::::<><>::res://Exit.gd<>uid://y4cg70qc5g85<>uid://g7t6mieree1o
 icon.svg::CompressedTexture2D::566365987826601722::1693430769::1693430769::1::::<><>::
 player (1).tscn::PackedScene::7736137448857989155::1693967810::0::1::::<><>::uid://dptvvj0bbb0bt<>res://Characters/player.gd<>uid://dlh7inrghcn0i<>uid://c047m2cw5ohwq<>uid://cdpj37tjfikf7<>uid://cxdd3agln6fig<>uid://1cmaxt0faj10<>uid://hlyhj40v0h1s<>res://Characters/Sword.gd
-level_3.tscn::PackedScene::5410970290879546734::1693967892::0::1::::<><>::
 testingattack.tscn::PackedScene::6218693843864222150::1693430769::0::1::::<><>::uid://mvnfa0yk4eke
 ::res://Characters/::1693877367
 player.gd::GDScript::-1::1693877367::0::1::::<>CharacterBody2D<>::
@@ -70,13 +69,14 @@ walking animation 2.png::CompressedTexture2D::5014971730289846370::1693430769::1
 soul bar experimental fill.png::CompressedTexture2D::4841021401097255381::1693430769::1693430769::1::::<><>::
 soul bar experimental outline.png::CompressedTexture2D::7630518346971231714::1693430769::1693430769::1::::<><>::
 soulbar experimental background.png::CompressedTexture2D::3690858996732224260::1693430769::1693430769::1::::<><>::
-::res://Levels/::1693967810
+::res://Levels/::1693967901
 CollisionShape2D.gd::GDScript::-1::1693471578::0::1::::attackable<>CollisionShape2D<>::
 Damagable.gd::GDScript::-1::1693470112::0::1::::<>Node<>::
 dash.tscn::PackedScene::1829768532541074913::1693430769::0::1::::<><>::res://dash.gd
 Enemy.gd::GDScript::-1::1693877367::0::1::::<>Area2D<>::
 level_1.tscn::PackedScene::6011366670583201824::1693967810::0::1::::<><>::uid://n23rq6nqwfjp<>uid://dihpb24rgkj4v<>uid://bst455fekke7e<>uid://dgyjr03elhve5<>uid://ca8a6d71xeubt<>res://Levels/Enemy.gd<>uid://bmnxabw08ta23<>uid://db0om5sjh71er<>uid://narlbyfnm6ik<>uid://chu0j0ajwlpk3
 level_2.tscn::PackedScene::3967224770423022425::1693967810::0::1::::<><>::uid://n23rq6nqwfjp<>uid://xi3pssmedo70
+level_3.tscn::PackedScene::5410970290879546734::1693967892::0::1::::<><>::
 security.gd::GDScript::-1::1693877953::0::1::::<>CharacterBody2D<>::
 ::res://UI/::1693967810
 game_over_screen.gd::GDScript::-1::1693877367::0::1::::<>CanvasLayer<>::

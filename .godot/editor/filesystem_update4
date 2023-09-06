@@ -1,13 +1,2 @@
-res://Levels/test_scene.tscn
+res://Levels/level_3.tscn
 res://Levels/Enemy.gd
-res://player (1).tscn
-res://Enemy/attackingEnemy/testingattack.tscn
-res://UI/game_over_screen.tscn
-res://bullet.tscn
-res://Levels/level_1.tscn
-res://bullet.gd
-res://Enemy/attackingEnemy/Damagable.gd
-res://Levels/Exit.gd
-res://UI/game_over_screen.gd
-res://Characters/player.gd
-res://Levels/level_2.tscn
