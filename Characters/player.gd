@@ -116,7 +116,6 @@ func set_soul_bar():
 		end_game()
 		get_tree().paused = true
 
-
 func _on_soultimer_timeout():
 	souls -=5
 	print(souls)
@@ -137,6 +136,7 @@ func enable_hitbox():
 func _on_enemy_space_body_entered(body):
 	in_enemy_space = true 
 	print("In enemy Space")
+	var parent_node = get_parent()
 
 func _on_enemy_space_body_exited(body):
 	in_enemy_space = false
@@ -146,6 +146,7 @@ func _on_enemy_space_other_body_entered(body):
 	in_enemy_space_other = true
 	print(body)
 	print("In other enemy Space")
+	var parent_node = get_parent()
 
 func _on_enemy_space_other_body_exited(body):
 	in_enemy_space_other = false

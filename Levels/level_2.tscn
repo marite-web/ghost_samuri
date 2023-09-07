@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwr0u242pi5tl"]
+[gd_scene load_steps=9 format=3 uid="uid://bwr0u242pi5tl"]
 
+[ext_resource type="PackedScene" uid="uid://dihpb24rgkj4v" path="res://player (1).tscn" id="1_20nxd"]
 [ext_resource type="Texture2D" uid="uid://n23rq6nqwfjp" path="res://ghost arting/tilemap.png" id="1_uig3l"]
 [ext_resource type="Texture2D" uid="uid://xi3pssmedo70" path="res://ghost arting/industrial.v1.png" id="2_nxwek"]
+[ext_resource type="PackedScene" uid="uid://cuum8j1ojxvkw" path="res://testingattack.tscn" id="4_o2msy"]
+[ext_resource type="PackedScene" uid="uid://chu0j0ajwlpk3" path="res://exit.tscn" id="5_6y7k4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a2b4m"]
 texture = ExtResource("1_uig3l")
@@ -1213,6 +1216,9 @@ sources/2 = SubResource("TileSetAtlasSource_dijqf")
 
 [node name="level_2" type="Node2D"]
 
+[node name="Player" parent="." instance=ExtResource("1_20nxd")]
+position = Vector2(-161, 77)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_woxdb")
 format = 2
@@ -1232,3 +1238,24 @@ layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(524281, 0, 5, 458759, 0, 5, 196621, 0, 5, 524315, 0, 5, 524319, 0, 5, 524323, 0, 5, 327721, 0, 5, 393269, 0, 5, 524355, 0, 5)
+
+[node name="testingattack" parent="." instance=ExtResource("4_o2msy")]
+position = Vector2(567, 142)
+
+[node name="testingattack2" parent="." instance=ExtResource("4_o2msy")]
+position = Vector2(268, 127)
+
+[node name="testingattack3" parent="." instance=ExtResource("4_o2msy")]
+position = Vector2(186, 59)
+
+[node name="testingattack4" parent="." instance=ExtResource("4_o2msy")]
+position = Vector2(57, 108)
+
+[node name="testingattack5" parent="." instance=ExtResource("4_o2msy")]
+position = Vector2(-93, 123)
+
+[node name="testingattack6" parent="." instance=ExtResource("4_o2msy")]
+position = Vector2(940, 142)
+
+[node name="Exit" parent="." instance=ExtResource("5_6y7k4")]
+position = Vector2(1206, 74)

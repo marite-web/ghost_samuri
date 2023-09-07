@@ -261,7 +261,7 @@ script = ExtResource("7_fm8kl")
 position = Vector2(-12, 2)
 shape = SubResource("CapsuleShape2D_w520p")
 
-[node name="Sword2" type="Area2D" parent="."]
+[node name="Sword2" type="Area2D" parent="." groups=["Swords"]]
 collision_mask = 7
 script = ExtResource("7_fm8kl")
 

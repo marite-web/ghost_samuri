@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjdd5i88vqrdu"]
+[gd_scene load_steps=8 format=3 uid="uid://cjdd5i88vqrdu"]
 
 [ext_resource type="Texture2D" uid="uid://xi3pssmedo70" path="res://ghost arting/industrial.v1.png" id="1_8n55g"]
 [ext_resource type="Texture2D" uid="uid://n23rq6nqwfjp" path="res://ghost arting/tilemap.png" id="2_44vye"]
+[ext_resource type="PackedScene" uid="uid://cuum8j1ojxvkw" path="res://testingattack.tscn" id="3_gxgb0"]
+[ext_resource type="PackedScene" uid="uid://chu0j0ajwlpk3" path="res://exit.tscn" id="4_qbfj8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mbsv"]
 resource_name = "ground"
@@ -1228,7 +1230,7 @@ layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
-layer_1/z_index = 3
+layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
 layer_2/name = "forground"
 layer_2/enabled = true
@@ -1237,3 +1239,27 @@ layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(655331, 0, 0, 655332, 65536, 0, 655333, 131072, 0, 655334, 196608, 0, 655335, 0, 0, 655336, 0, 0, 655337, 65536, 0, 655338, 131072, 0, 655345, 0, 0, 655346, 65536, 0, 655347, 131072, 0, 655348, 196608, 0, 655349, 0, 0, 655350, 65536, 0, 655351, 131072, 0, 655352, 196608, 0, 393220, 0, 0, 393221, 65536, 0, 393222, 131072, 0, 393223, 196608, 0, 393224, 0, 0, 393225, 65536, 0, 393226, 131072, 0, 393227, 196608, 0, 589838, 0, 0, 589839, 65536, 0, 589840, 131072, 0, 589841, 196608, 0, 589842, 0, 0, 589843, 65536, 0, 589844, 131072, 0, 589845, 196608, 0, 589846, 0, 0, 589847, 0, 0, 589848, 65536, 0, 589849, 131072, 0, 589861, 0, 0, 589862, 65536, 0, 589863, 131072, 0, 589864, 196608, 0, 589865, 0, 0, 589866, 65536, 0, 589867, 131072, 0, 589868, 196608, 0, 589869, 0, 0, 589870, 65536, 0, 589871, 131072, 0, 589872, 196608, 0, 589880, 196608, 0, 589881, 65536, 0, 589882, 131072, 0, 589883, 196608, 0, 589877, 0, 0, 589878, 65536, 0, 589879, 131072, 0, 589873, 0, 0, 589874, 65536, 0, 589875, 131072, 0, 589876, 196608, 0, 262209, 65536, 0, 262210, 131072, 0, 262211, 196608, 0, 262212, 196608, 0, 262208, 0, 0, 589850, 196608, 0, 983024, 0, 0, 983025, 65536, 0, 983026, 0, 0, 983027, 65536, 0, 983028, 131072, 0, 983029, 0, 0, 983030, 65536, 0, 983031, 131072, 0, 983032, 196608, 0, 655357, 0, 0, 655358, 65536, 0, 655359, 131072, 0, 589824, 196608, 0, 655339, 196608, 0, 720876, 0, 0, 786413, 0, 0, 851950, 0, 0, 917487, 0, 0, 917497, 0, 0, 851962, 0, 0, 786427, 0, 0, 720892, 0, 0, 524289, 0, 0, 458754, 0, 0, 458755, 0, 0, 458764, 0, 0, 524301, 0, 0, 524315, 0, 0, 458780, 0, 0, 393245, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 393249, 0, 0, 393250, 0, 0, 458787, 0, 0, 524324, 0, 0, 524348, 0, 0, 458813, 0, 0, 393278, 0, 0, 458814, 0, 0, 327743, 0, 0, 589796, 5, 5, 589812, 5, 5, 917492, 5, 5, 589823, 5, 5, 327686, 5, 5, 524306, 5, 5, 524313, 5, 5, 524332, 5, 5, 524344, 5, 5, 262175, 5, 5)
+
+[node name="testingattack" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(-144, 140)
+
+[node name="testingattack2" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(149, 93)
+
+[node name="testingattack3" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(-219, 222)
+
+[node name="testingattack4" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(-400, 140)
+
+[node name="testingattack5" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(343, 139)
+
+[node name="testingattack6" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(624, 144)
+
+[node name="testingattack7" parent="." instance=ExtResource("3_gxgb0")]
+position = Vector2(944, 142)
+
+[node name="Exit" parent="." instance=ExtResource("4_qbfj8")]
+position = Vector2(1073, 58)

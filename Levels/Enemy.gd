@@ -13,7 +13,8 @@ var target_postition : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	target_postition = start_position + move_direction
+	
+	
 	start_position = security.global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

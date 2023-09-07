@@ -1355,6 +1355,42 @@ animation = &"shooting"
 position = Vector2(121, 81)
 shape = SubResource("CapsuleShape2D_k8aj7")
 
+[node name="Enemy2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("6_o52jv")
+move_direction = Vector2(-75, 2.08165e-12)
+
+[node name="enemy_space" type="Area2D" parent="Enemy2"]
+position = Vector2(-2, 2)
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/enemy_space"]
+position = Vector2(79, 52)
+shape = SubResource("RectangleShape2D_02175")
+
+[node name="enemy_space_other" type="Area2D" parent="Enemy2"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/enemy_space_other"]
+position = Vector2(171, 54)
+shape = SubResource("RectangleShape2D_r4ohi")
+
+[node name="security" type="CharacterBody2D" parent="Enemy2"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="security_guard" type="AnimatedSprite2D" parent="Enemy2/security"]
+position = Vector2(122, 78)
+sprite_frames = SubResource("SpriteFrames_m1are")
+animation = &"shooting"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/security"]
+position = Vector2(121, 81)
+shape = SubResource("CapsuleShape2D_k8aj7")
+
 [node name="testingattack" parent="." instance=ExtResource("9_8bqow")]
 position = Vector2(-121, 79)
 
@@ -1375,3 +1411,8 @@ position = Vector2(474, 77)
 [connection signal="body_exited" from="Enemy/enemy_space" to="Player" method="_on_enemy_space_body_exited"]
 [connection signal="body_entered" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_entered"]
 [connection signal="body_exited" from="Enemy/enemy_space_other" to="Player" method="_on_enemy_space_other_body_exited"]
+[connection signal="body_entered" from="Enemy2" to="Enemy2" method="_on_body_entered"]
+[connection signal="body_entered" from="Enemy2/enemy_space" to="Player" method="_on_enemy_space_body_entered"]
+[connection signal="body_exited" from="Enemy2/enemy_space" to="Player" method="_on_enemy_space_body_exited"]
+[connection signal="body_entered" from="Enemy2/enemy_space_other" to="Player" method="_on_enemy_space_other_body_entered"]
+[connection signal="body_exited" from="Enemy2/enemy_space_other" to="Player" method="_on_enemy_space_other_body_exited"]
